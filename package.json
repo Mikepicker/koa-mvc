@@ -1,0 +1,22 @@
+{
+  "name": "jobs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.coffee",
+  "scripts": {
+    "serve": "coffee app.coffee",
+    "dev": "nodemon app.coffee mvc/**/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-pug": "^3.0.0-2",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "mongoose": "^4.12.2"
+  }
+}

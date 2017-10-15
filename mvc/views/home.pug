@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='tether/tether.min.css')
+    link(rel='stylesheet', href='bootstrap/bootstrap.min.css')
+    title Jobs Post
+  body
+    div.container
+      each job in jobs
+        p
+          a(href=job.url)
+            strong= job.title
+          br
+          small= job.source
+        hr
+
+    script(src='tether/tether.min.js')
+    script(src='jquery/jquery-3.2.1.min.js')
+    script(src='bootstrap/bootstrap.min.js')
