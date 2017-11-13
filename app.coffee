@@ -25,6 +25,11 @@ app.use(bodyParser())
 # Serve static content
 app.use(serve(__dirname + '/public'))
 
+# Custom middlewares
+middlewares = require('./mvc/middlewares.coffee').middlewares
+for k,v of middlewares
+  app.use v
+
 # Dynamically import controllers
 for file in fs.readdirSync('./mvc/controllers')
   if file.substr(-7) == '.coffee'
@@ -35,4 +40,4 @@ for file in fs.readdirSync('./mvc/controllers')
 app
   .use(router.routes())
   .use(router.allowedMethods())
-app.listen(3001)
+app.listen(9898)
